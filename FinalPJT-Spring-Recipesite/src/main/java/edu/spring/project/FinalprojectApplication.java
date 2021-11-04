@@ -25,7 +25,6 @@ import recipe.RecipeImgDAO;
 
 
 @SpringBootApplication
-
 @ComponentScan
 @ComponentScan(basePackageClasses = UserController.class)
 @ComponentScan(basePackageClasses = RecipeController.class)
