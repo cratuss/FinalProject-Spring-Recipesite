@@ -1,0 +1,53 @@
+-- 유저 테이블 생성
+create table user(
+	user_no int,
+	user_name varchar(10),
+	user_email varchar(20),
+	user_pw varchar(20),
+	user_phone bigint,
+	user_address varchar(40)
+	)
+
+-- 레시피 테이블 생성
+create table recipe(
+	recipe_no bigint,	
+	user_no varchar(10),
+	recipe_date datetime,
+	recipe_title varchar(40),
+	recipe_name varchar(20),
+	recipe_emotion varchar(50),
+	recipe_desc varchar(1000),
+	recipe_img varchar(50)
+	)
+
+-- 찜_레시피 테이블 생성
+create table zzim_recipe(
+	recipe_no bigint,
+	user_no int
+	)
+	
+-- 재료 테이블 생성
+create table ingredient(
+	recipe_no bigint,
+	돼지고기 tinyint,
+	소고기 tinyint,
+	닭고기 tinyint,
+	콩 tinyint,
+	사과 tinyint,
+	갈치 tinyint,
+	고등어 tinyint,
+	물 tinyint,
+	양파 tinyint,
+	파 tinyint
+	)
+
+-- 공지 테이블 생성	
+create table notice(
+	notice_no int,
+	user_no int,
+	notice_date datetime,
+	notice_title varchar(20),
+	notice_desc varchar(1000),
+	notice_file varchar(50),
+	notice_hits bigint
+	)
